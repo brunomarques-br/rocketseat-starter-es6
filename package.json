@@ -1,0 +1,13 @@
+{
+  "name": "es6-initial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-env": "^7.8.4"
+  },
+  "scripts": {
+    "dev": "babel ./main.js -o ./bundle.js"
+  }
+}
