@@ -2,9 +2,39 @@
 
 /* 
 
-    ** AULA #3 ** - Trabalhando com Arrays
+    ** AULA #4 ** - Trabalhando com Arrow Functions
 
 */
+
+const arr = [1, 2, 3, 4, 5, 6];
+
+// Reduz a verbosidade de uma função com uma linha somente.
+// Geralmente utilizada para callback.
+const newArr = arr.map(item => item * 2);
+
+console.log(newArr);
+
+const teste = () => {
+    return 'teste';
+}
+
+console.log(teste());
+
+const testeArr = () => [1, 2, 3, 4, 5];
+
+console.log(testeArr);
+
+const testeObjeto = () => ({ nome: 'Bruno' });
+
+console.log(testeObjeto);
+
+// ##################################################################################################
+
+/*
+
+    ** AULA #3 ** - Trabalhando com Arrays
+
+*
 
 const arr = [1, 2, 3, 4, 5, 6];
 
@@ -35,6 +65,8 @@ const find = arr.find(function(item){
 })
 
 console.log(find);
+
+/*
 
 // ##################################################################################################
 

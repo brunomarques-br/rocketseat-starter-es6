@@ -4,30 +4,76 @@
 
 /* 
 
-    ** AULA #3 ** - Trabalhando com Arrays
+    ** AULA #4 ** - Trabalhando com Arrow Functions
 
 */
-var arr = [1, 2, 3, 4, 5, 6]; //map - percorrer todos os items de um vetor e executar todos os passos que a function implementa.
+var arr = [1, 2, 3, 4, 5, 6]; // Reduz a verbosidade de uma função com uma linha somente.
+// Geralmente utilizada para callback.
 
-var newArr = arr.map(function (item, index) {
-  return item * 2 + " - Posição do array: " + index;
+var newArr = arr.map(function (item) {
+  return item * 2;
 });
-console.log(newArr); // reduce - consumir todo o vetor e transforma-lo em uma única variável (soma total dos valores)
+console.log(newArr);
 
-var sum = arr.reduce(function (total, next) {
-  return total + next;
-});
-console.log(sum); // filter - utilizado para filtrar os valores de um array
+var teste = function teste() {
+  return 'teste';
+};
 
-var filter = arr.filter(function (item) {
-  return item % 2 === 0; // filta todos os números pares.
-});
-console.log(filter); // find - utilizado para buscar um valor específico dentro de um array
+console.log(teste());
 
-var find = arr.find(function (item) {
-  return item === 4;
-});
-console.log(find); // ##################################################################################################
+var testeArr = function testeArr() {
+  return [1, 2, 3, 4, 5];
+};
+
+console.log(testeArr);
+
+var testeObjeto = function testeObjeto() {
+  return {
+    nome: 'Bruno'
+  };
+};
+
+console.log(testeObjeto); // ##################################################################################################
+
+/*
+
+    ** AULA #3 ** - Trabalhando com Arrays
+
+*
+
+const arr = [1, 2, 3, 4, 5, 6];
+
+//map - percorrer todos os items de um vetor e executar todos os passos que a function implementa.
+const newArr = arr.map(function (item, index) {
+    return item * 2 + " - Posição do array: " + index;
+})
+
+console.log(newArr);
+
+// reduce - consumir todo o vetor e transforma-lo em uma única variável (soma total dos valores)
+const sum = arr.reduce(function(total, next){
+    return total + next;
+})
+
+console.log(sum);
+
+// filter - utilizado para filtrar os valores de um array
+const filter = arr.filter(function(item){
+    return item % 2 === 0 ; // filta todos os números pares.
+})
+
+console.log(filter);
+
+// find - utilizado para buscar um valor específico dentro de um array
+const find = arr.find(function(item){
+    return item === 4;
+})
+
+console.log(find);
+
+/*
+
+// ##################################################################################################
 
 /*
 
