@@ -2,9 +2,127 @@
 
 /* 
 
-    ** AULA #4 ** - Trabalhando com Arrow Functions
+    ** AULA #7 ** - Operadores REST e SPREAD
 
 */
+
+// REST Operator (...)
+
+const usuario = {
+    nome: 'Bruno',
+    idade: 29,
+    emrpesa: 'BS.io'
+};
+
+const { nome, ...resto } = usuario;
+
+console.log(nome);
+console.log(resto);
+
+
+//outro exemplo utilizando array
+
+const arr = [1, 2, 3, 4, 5, 6];
+const [a, b, ...c] = arr;
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+// utilizando para parametros de funcoes com arrrow functions
+
+function soma(...params) {
+    return params.reduce((total, next) => total + next);
+}
+
+console.log(soma(1, 2, 3, 4));
+
+// SPREAD Operator -- Propagar o objeto de arrays para uma outra estrutura de dados.
+
+const arr1 = [1, 2, 3, 4];
+const arr2 = [5, 6, 7, 8];
+
+const arr3 = [...arr1, ...arr2];
+
+console.log(arr3);
+
+// exemplo de alteração de dados
+const usuario2 = { ...usuario, nome: 'Juão Paulo' };
+console.log(usuario2);
+
+
+// ##################################################################################################
+
+/*
+
+    ** AULA #6 ** - Desestruturação de valores
+
+*
+
+const usuario = {
+    nome: 'Bruno',
+    idade: 29,
+    endereco: {
+        cidade: 'Brasília',
+        estado: 'DF',
+    },
+};
+
+//imprimir todos os dados
+console.log(usuario);
+
+//obter dados específicos da forma padrão
+const nome_ = usuario.nome;
+const idade_ = usuario.idade;
+const cidade_ = usuario.endereco.cidade;
+
+//obter dados específicos usando desestruturação (Es6)
+
+const { nome, idade, endereco: { cidade } } = usuario;
+
+console.log(nome);
+console.log(idade);
+console.log(endereco);
+console.log(cidade);
+
+// usando desestruturação por parâmetros de funções enviando o objeto
+function mostraUsuario({ nome, idade }) {
+    console.log(nome, idade);
+}
+
+mostraUsuario(usuario);
+
+
+// ##################################################################################################
+
+/*
+
+    ** AULA #5 ** - Valores Padrão
+
+*
+
+function soma(a, b) { return a + b }
+
+console.log(soma(1)); //NaN
+console.log(soma()); //NaN
+
+// solução, inicializar as variáveis dentro de uma função, evitando assim o erro de Not a Number
+
+const soma = (a = 3, b = 4) => a + b;
+
+console.log(soma(1));
+console.log(soma());
+
+
+
+
+// ##################################################################################################
+
+/*
+
+    ** AULA #4 ** - Trabalhando com Arrow Functions
+
+*
 
 const arr = [1, 2, 3, 4, 5, 6];
 
