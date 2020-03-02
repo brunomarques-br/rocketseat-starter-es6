@@ -2,9 +2,28 @@
 
 /* 
 
-    ** AULA #7 ** - Operadores REST e SPREAD
+    ** AULA #8 ** - Template Literals - manipulação de strings sem precisar concatenar variáveis.
 
 */
+
+const nome = "Bruno Marques";
+const idade = 29;
+
+//modo tradicional de imprimir um valor
+console.log('Meu nome é '+ nome + 'e tenho ' + idade + 'anos');
+
+//novo modo, lembrar de usar as aspas simples como `crase`
+console.log(`Meu nome é ${nome} e tenho ${idade} anos`);
+
+
+
+// ##################################################################################################
+
+/* 
+
+    ** AULA #7 ** - Operadores REST e SPREAD
+
+*
 
 // REST Operator (...)
 
